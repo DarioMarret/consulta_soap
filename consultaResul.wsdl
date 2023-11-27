@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <Consultar xmlns="https://tempuri.org/">
+            <RequestConsultaObject>
+                <Clave_Empresa>String</Clave_Empresa>
+                <Codigo_Institucion_Financiera>String</Codigo_Institucion_Financiera>
+                <Canal>String</Canal>
+                <Terminal>String</Terminal>
+                <Fecha_Transaccion>String</Fecha_Transaccion>
+                <Hora_Transaccion>String</Hora_Transaccion>
+                <Cod_Obligacion>1313177238</Cod_Obligacion>
+                <Parametro_Busqueda>Int</Parametro_Busqueda>
+                <Tipo_Transaccion>String</Tipo_Transaccion>
+                <Tipo_Producto>String</Tipo_Producto>
+            </RequestConsultaObject>
+        </Consultar>
+    </soap:Body>
+</soap:Envelope>

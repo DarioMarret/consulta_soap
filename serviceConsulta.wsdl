@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Metodo_de_Consulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestConsultaObject" type="tns:RequestConsulta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Clave_Empresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Institucion_Financiera" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hora_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Obligacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parametro_Busqueda" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Producto" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_ConsultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Metodo_de_ConsultaResult" type="tns:ResponseConsulta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Producto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parametro_Busqueda" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje_Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Obligacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre_Cliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Total_a_Pagar" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nro_Cobros" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfItemsConsulta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItemsConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemsConsulta" nillable="true" type="tns:ItemsConsulta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemsConsulta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Cobro" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Periodo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Auxiliar" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Minimo_Cobro" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Maxima_Cobro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Retener" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Base_Imponible" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_Pago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestPagoObject" type="tns:RequestPago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestPago">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Clave_Empresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Institucion_Financiera" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Obligacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nro_pagos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Total_Pagado" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Contable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hora_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_Secuencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Forma_De_Pago_1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto_1" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Forma_De_Pago_2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto_2" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parametro_Busqueda" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Producto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfItemsPago" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItemsPago">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemsPago" nillable="true" type="tns:ItemsPago" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemsPago">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDTransaccion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Periodo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Pagado" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_PagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Metodo_de_PagoResult" type="tns:ResponsePago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponsePago">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje_Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Obligacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre_Cliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Transaccion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Transaccion_Empresa" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_Secuencia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nro_Pagos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Total_Pagado" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Producto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parametro_Busqueda" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_Reverso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestReversoObject" type="tns:RequestReverso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestReverso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Clave_Empresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Institucion_Financiera" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Canal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Transaccion_Empresa" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_Secuencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Obligacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nro_pagos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Total_Pagado" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Contable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hora_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Forma_De_Pago_1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto_1" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Forma_De_Pago_2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto_2" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parametro_Busqueda" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Producto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfItemsReverso" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItemsReverso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ItemsReverso" nillable="true" type="tns:ItemsReverso" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemsReverso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDTransaccion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Periodo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Pagado" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_ReversoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Metodo_de_ReversoResult" type="tns:ResponseReverso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseReverso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje_Respuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Obligacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre_Cliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Transaccion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Transaccion_Empresa" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_Secuencia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nro_Pagos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Valor_Total_Reversado" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Producto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parametro_Busqueda" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestRequestObject" type="tns:TestRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TestRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Clave_Empresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Institucion_Financiera" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hora_Transaccion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Metodo_de_TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Metodo_de_TestResult" type="tns:TestResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TestResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Transaccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoRespuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje_Respuesta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Metodo_de_ConsultaSoapIn">
+    <wsdl:part name="parameters" element="tns:Metodo_de_Consulta" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_ConsultaSoapOut">
+    <wsdl:part name="parameters" element="tns:Metodo_de_ConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_PagoSoapIn">
+    <wsdl:part name="parameters" element="tns:Metodo_de_Pago" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_PagoSoapOut">
+    <wsdl:part name="parameters" element="tns:Metodo_de_PagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_ReversoSoapIn">
+    <wsdl:part name="parameters" element="tns:Metodo_de_Reverso" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_ReversoSoapOut">
+    <wsdl:part name="parameters" element="tns:Metodo_de_ReversoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Metodo_de_Test" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_de_TestSoapOut">
+    <wsdl:part name="parameters" element="tns:Metodo_de_TestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Metodo_de_Consulta">
+      <wsdl:input message="tns:Metodo_de_ConsultaSoapIn" />
+      <wsdl:output message="tns:Metodo_de_ConsultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Pago">
+      <wsdl:input message="tns:Metodo_de_PagoSoapIn" />
+      <wsdl:output message="tns:Metodo_de_PagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Reverso">
+      <wsdl:input message="tns:Metodo_de_ReversoSoapIn" />
+      <wsdl:output message="tns:Metodo_de_ReversoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Test">
+      <wsdl:input message="tns:Metodo_de_TestSoapIn" />
+      <wsdl:output message="tns:Metodo_de_TestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Metodo_de_Consulta">
+      <soap:operation soapAction="http://tempuri.org/Metodo_de_Consulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Pago">
+      <soap:operation soapAction="http://tempuri.org/Metodo_de_Pago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Reverso">
+      <soap:operation soapAction="http://tempuri.org/Metodo_de_Reverso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Test">
+      <soap:operation soapAction="http://tempuri.org/Metodo_de_Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Metodo_de_Consulta">
+      <soap12:operation soapAction="http://tempuri.org/Metodo_de_Consulta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Pago">
+      <soap12:operation soapAction="http://tempuri.org/Metodo_de_Pago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Reverso">
+      <soap12:operation soapAction="http://tempuri.org/Metodo_de_Reverso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_de_Test">
+      <soap12:operation soapAction="http://tempuri.org/Metodo_de_Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://177.234.209.101:5000/consulta?wsdl" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://177.234.209.101:5000/consulta?wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

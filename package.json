@@ -1,0 +1,27 @@
+{
+  "name": "consultas-soap",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "is-empty": "^1.2.0",
+    "moment": "^2.29.4",
+    "soap": "^0.45.0",
+    "xml2js": "^0.6.2"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "client": "nodemon client.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
