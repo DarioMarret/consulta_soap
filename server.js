@@ -69,7 +69,7 @@ const servicio = {
 
 soap.listen(app, endpoint, servicio, xml);
 
-const port = 3002;
+const port = 5000;
 app.listen(port, () => {
   console.log(`Servidor SOAP escuchando en http://localhost:${port}${endpoint}?wsdl`);
 });
