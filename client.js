@@ -1,7 +1,7 @@
 const util = require('util');
 const soap = require('soap');
 
-const url = 'http://localhost:3002/consulta?wsdl';
+const url = 'http://localhost:5000/consulta?wsdl';
 const options = {
   forceSoap12Headers: true, // Asegúrate de que esta opción esté configurada correctamente
 };
@@ -23,7 +23,7 @@ function tesInfo() {
           Terminal: '123456',
           Fecha_Transaccion: '02',
           Hora_Transaccion: '012',
-          Cod_Obligacion: '2145',
+          Cod_Obligacion: '0950578989',
           Parametro_Busqueda: 2,
           Tipo_Transaccion: '01',
           Tipo_Producto: '01',

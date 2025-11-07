@@ -1,0 +1,59 @@
+{
+  "estado": "exito",
+  "datos": [
+    {
+      "id": 14503,
+      "nombre": "MARTHA AGUILAR CORONADO SERV2",
+      "estado": "ACTIVO",
+      "correo": "",
+      "telefono": "0965875512",
+      "movil": "0984242558",
+      "cedula": "156325487S2",
+      "pasarela": "",
+      "codigo": "vurbam",
+      "direccion_principal": "LOMAS DE LA FLORIDA",
+      "trafico": "",
+      "mantenimiento": false,
+      "fecha_suspendido": "0000-00-00 00:00:00",
+      "servicios": [
+        {
+          "id": 14468,
+          "idperfil": 87,
+          "nodo": 11,
+          "costo": "18.00",
+          "ipap": "",
+          "mac": "",
+          "ip": "10.13.1.245",
+          "instalado": "2025-09-12",
+          "pppuser": "0000014468",
+          "ppppass": "IOBLe58w9vRXnxW",
+          "emisor": "Ninguno",
+          "tiposervicio": "internet",
+          "status_user": "OFFLINE",
+          "coordenadas": "",
+          "direccion": "LOMAS DE LA FLORIDA",
+          "snmp_comunidad": "public",
+          "firewall_state": "",
+          "smartolt": "",
+          "limitado": 0,
+          "ppp_routes": "",
+          "ppp_localaddress": "",
+          "idnap": 0,
+          "portnap": 0,
+          "onu_sn": "",
+          "onu_ssid_wifi": "",
+          "onu_password_wifi": "",
+          "personalizados": "",
+          "smartolt_catv": 1,
+          "ipv6": "",
+          "ipv6_duid": "",
+          "last_connected": "0000-00-00 00:00:00",
+          "trapemn_id": 0,
+          "trapemn_data": null,
+          "perfil": "Plan_STUDENT-350M"
+        }
+      ],
+      "facturacion": { "facturas_nopagadas": 1, "total_facturas": "11.00" }
+    }
+  ]
+}

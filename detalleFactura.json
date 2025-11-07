@@ -1,0 +1,88 @@
+[
+  {
+    "estado": "exito",
+    "factura": {
+      "id": 309915,
+      "legal": 306443,
+      "idcliente": 12358,
+      "emitido": "2025-10-29",
+      "vencimiento": "2025-12-01",
+      "total": "20.70",
+      "estado": "No pagado",
+      "cobrado": "0.00",
+      "impuesto": "2.70",
+      "oxxo_id": "",
+      "oxxo_referencia": "",
+      "barcode_cobro_digital": "",
+      "otros_impuestos": "0;0;0;",
+      "siro": 0,
+      "hashsiro": "",
+      "siroconcepto": 0,
+      "barcode_siro": "",
+      "percepcion_afip": "0.00",
+      "saldo": "0.00",
+      "moneda": 1,
+      "urlpdf": "https://sistema.megatel.ec/admin/ajax/viewdoc?a=doc&t=0&id=L2U4MnFTMjhzK0pYam9UY0V4Ulh2QT09",
+      "fechapago": "0000-00-00",
+      "subtotal": "18.00",
+      "subtotal2": "$ 18.00",
+      "total2": "$ 20.70",
+      "impuesto2": "$ 2.70",
+      "formapago": ""
+    },
+    "items": [
+      {
+        "descrp": "Servicio de Internet\r\nfacturación del 01/12/2025 al 31/12/2025\r\nFecha de Suspensión : 06/12/2025\r\nPlan suscrito : Plan_STUDENT-350M\r\nBajada : 250000K\r\nSubida : 250000K",
+        "unidades": 1,
+        "imp": "15.00",
+        "precio": "18.00",
+        "total": 20.7,
+        "precio2": "$ 18.00",
+        "total2": "$ 20.70"
+      }
+    ]
+  },
+  {
+    "estado": "exito",
+    "factura": {
+      "id": 309914,
+      "legal": 306442,
+      "idcliente": 12358,
+      "emitido": "2025-10-29",
+      "vencimiento": "2025-11-01",
+      "total": "20.70",
+      "estado": "No pagado",
+      "cobrado": "0.00",
+      "impuesto": "2.70",
+      "oxxo_id": "",
+      "oxxo_referencia": "",
+      "barcode_cobro_digital": "",
+      "otros_impuestos": "0;0;0;",
+      "siro": 0,
+      "hashsiro": "",
+      "siroconcepto": 0,
+      "barcode_siro": "",
+      "percepcion_afip": "0.00",
+      "saldo": "0.00",
+      "moneda": 1,
+      "urlpdf": "https://sistema.megatel.ec/admin/ajax/viewdoc?a=doc&t=0&id=dTFvL1FPM0FKVVNxQk1pSmdzUS8zZz09",
+      "fechapago": "0000-00-00",
+      "subtotal": "18.00",
+      "subtotal2": "$ 18.00",
+      "total2": "$ 20.70",
+      "impuesto2": "$ 2.70",
+      "formapago": ""
+    },
+    "items": [
+      {
+        "descrp": "Servicio de Internet\r\nfacturación del 01/11/2025 al 30/11/2025\r\nFecha de Suspensión : 06/11/2025\r\nPlan suscrito : Plan_STUDENT-350M\r\nBajada : 250000K\r\nSubida : 250000K",
+        "unidades": 1,
+        "imp": "15.00",
+        "precio": "18.00",
+        "total": 20.7,
+        "precio2": "$ 18.00",
+        "total2": "$ 20.70"
+      }
+    ]
+  }
+]

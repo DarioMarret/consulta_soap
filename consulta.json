@@ -1,0 +1,15 @@
+{
+  "Metodo_de_PagoResult": {
+    "Codigo_Respuesta": "000",
+    "Mensaje_Respuesta": "Pago registrado correctamente.",
+    "Parametro_Busqueda": 2,
+    "Cod_Obligacion": "0941089492",
+    "Nombre_Cliente": "PRUEBA PAGOS",
+    "Fecha_Transacción": "20250513",
+    "ID_Transaccion_Empresa": 258263,
+    "ID_Secuencia": 258263,
+    "Nro_Pagos": 1,
+    "Valor_Total_Pagado": 15,
+    "Tipo_Producto": "SERVICIO"
+  }
+}

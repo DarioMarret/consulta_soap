@@ -345,10 +345,10 @@
   </wsdl:binding>
   <wsdl:service name="Service">
     <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
-      <soap:address location="http://172.33.10.100:5000/consulta?wsdl" />
+      <soap:address location="http://177.234.209.102:5000/consulta?wsdl" />
     </wsdl:port>
     <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
-      <soap12:address location="http://172.33.10.100:5000/consulta?wsdl" />
+      <soap12:address location="http://177.234.209.102:5000/consulta?wsdl" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

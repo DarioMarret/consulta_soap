@@ -1,0 +1,7 @@
+CREATE TABLE api_tokens (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  token VARCHAR(255) NOT NULL,
+  is_active BOOLEAN DEFAULT true,
+  nombre_cliente VARCHAR(255),
+  creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
